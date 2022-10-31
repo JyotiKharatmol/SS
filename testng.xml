@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+<listeners>
+
+<listener class-name="SS.Listeners"/>
+
+</listeners>
+
+  <test name="Verify the login page">
+    <classes>
+      <class name="SS.LoginPageTest"/>
+    </classes>
+  </test>
+  
+  
+   <test  name="Verify the forgot password page">
+    <classes>
+      <class name="SS.ForgotPasswordPageTest"/>
+   </classes>
+  </test>
+
+  
+   <!-- Test -->
+</suite> <!-- Suite -->
