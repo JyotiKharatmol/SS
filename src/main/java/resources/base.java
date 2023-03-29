@@ -25,11 +25,7 @@ public class base {
 
 	public WebDriver initializeBrowser() throws IOException
 	{
-		//chrome
-		//firefox
-		//edge
-		
-		FileInputStream fis = new FileInputStream("C:\\Users\\jyoti_xfiqe3z\\OneDrive\\Desktop\\SS\\src\\main\\java\\resources\\data.properties");
+		FileInputStream fis = new FileInputStream("C:\\Users\\jyoti_xfiqe3z\\GitSS\\src\\main\\java\\resources\\data.properties");
 		
 		pro = new Properties();
 		pro.load(fis);
@@ -37,7 +33,7 @@ public class base {
 		
 		if(browserName.equals("chrome"))
 		{
-			System.setProperty("webdriver.chrome.driver", "C:\\Users\\jyoti_xfiqe3z\\OneDrive\\Documents\\ChromeDriver\\chromedriver_win32\\chromedriver.exe");
+			System.setProperty("webdriver.chrome.driver", "C:\\Users\\jyoti_xfiqe3z\\Desktop\\chromedriver_win32\\chromedriver.exe");
 			driver = new ChromeDriver();	
 		}
 		
