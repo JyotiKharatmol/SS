@@ -1,4 +1,5 @@
 SS_Uber\Listeners.class
+SS_Solo\Instructor_DetailsTest.class
 SS_Uber\CreateSoloInstructorTest.class
 SS_Uber\LoginPageTest.class
 SS_Uber\ForgotPasswordPageTest.class

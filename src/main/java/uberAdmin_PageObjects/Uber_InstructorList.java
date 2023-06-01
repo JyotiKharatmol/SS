@@ -5,12 +5,15 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class Uber_InstructorList {
+import Abstract.AbstractComponent;
+
+public class Uber_InstructorList extends AbstractComponent {
 
 	WebDriver driver;
 	
 	public Uber_InstructorList(WebDriver driver)
 	{
+		super(driver);
 		this.driver=driver;
 		PageFactory.initElements(driver, this);
 	}
@@ -44,7 +47,7 @@ public class Uber_InstructorList {
 	@FindBy(xpath="//div[@role='grid']/div[@role='rowgroup']")
 	WebElement soloDataTable;
 	
-	@FindBy(css="div[class='jss20'] button")
+	@FindBy(xpath="//*[text()='LOG OUT']")
 	WebElement logoutButton;
 	
 	@FindBy(css="div[role='columnheader']:nth-child(1) span")
@@ -74,6 +77,7 @@ public class Uber_InstructorList {
 	}
 	public WebElement SoloInstructorTab()
 	{
+		waitForElementToAppear(soloInstructorTab);
 		return soloInstructorTab;
 	}
 	public WebElement AddCompanyButton()
@@ -111,6 +115,7 @@ public class Uber_InstructorList {
 	}
 	public WebElement LogoutButton()
 	{
+		waitForElementToAppear(logoutButton);
 		return logoutButton;
 	}
 	

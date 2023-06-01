@@ -2,19 +2,25 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Suite">
 
-  <test name="Verify the login page">
+<test  name="Verify the Login Page">
     <classes>
-      <class name="SS.CreateSoloInstructorTest"/>
-    </classes>
+      <class name="SS_Uber.LoginPageTest"/>
+   </classes>
   </test>
   
-  
-   <test  name="Verify the forgot password page">
+   <test  name="Verify the Forgot password page">
     <classes>
-      <class name="SS.ForgotPasswordPageTest"/>
+      <class name="SS_Uber.ForgotPasswordPageTest"/>
    </classes>
   </test>
 
+  <test name="Verify the Create solo-Instructor page">
+    <classes>
+      <class name="SS_Uber.CreateSoloInstructorTest"/>
+    </classes>
+  </test> 
+  
+ 
   
    <!-- Test -->
 </suite> <!-- Suite -->

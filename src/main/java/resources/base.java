@@ -29,17 +29,18 @@ public class base {
 		
 		pro = new Properties();
 		pro.load(fis);
-		String browserName = pro.getProperty("browser");
+		
+		String browserName = System.getProperty("browser")!=null ? System.getProperty("browser"):pro.getProperty("browser");
 		
 		if(browserName.equals("chrome"))
 		{
-			System.setProperty("webdriver.chrome.driver", "C:\\Users\\jyoti_xfiqe3z\\Desktop\\chromedriver_win32\\chromedriver.exe");
+			System.setProperty("webdriver.chrome.driver", "C:\\Users\\jyoti_xfiqe3z\\Desktop\\Personal\\Selenium Java\\Browser Driver\\chromedriver_win32\\chromedriver.exe");
 			driver = new ChromeDriver();	
 		}
 		
 		if(browserName.equals("firefox"))
 		{
-			System.setProperty("webdriver.gecko.driver", "C:\\Users\\jyoti_xfiqe3z\\OneDrive\\Documents\\GeckoDriver\\geckodriver-v0.31.0-win64\\geckodriver.exe");
+			System.setProperty("webdriver.gecko.driver", "C:\\Users\\jyoti_xfiqe3z\\Desktop\\Personal\\Selenium Java\\Gecko Driver\\geckodriver-v0.33.0-win32\\geckodriver.exe");
 			 driver = new FirefoxDriver();	
 		}
 		

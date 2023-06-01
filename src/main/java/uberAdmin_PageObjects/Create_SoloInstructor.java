@@ -5,12 +5,15 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class Create_SoloInstructor {
+import Abstract.AbstractComponent;
+
+public class Create_SoloInstructor extends AbstractComponent {
 
 	WebDriver driver;
 	
 	Create_SoloInstructor(WebDriver driver)
 	{
+		super(driver);
 		this.driver=driver;
 		PageFactory.initElements(driver, this);
 	}
@@ -87,10 +90,12 @@ public class Create_SoloInstructor {
 	}
 	public WebElement TimeZone()
 	{
+		waitForElementToAppear(timeZone);
 		return timeZone;
 		
 	}
 	public WebElement TimeZone_eastern()
+	
 	{
 		return timeZone_eastern;
 	}

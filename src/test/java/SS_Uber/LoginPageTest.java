@@ -72,8 +72,8 @@ public class LoginPageTest extends base {
 	{
 		
 		Uber_Login l = new Uber_Login(driver);
-		l.EmailID().sendKeys("");
-		l.Password().sendKeys("");
+		l.EmailID().clear();
+		l.Password().clear();
 		Assert.assertTrue(driver.findElement(By.cssSelector("button[type='submit']")).getAttribute("tabindex").contains("-1"));
 	}
 	
@@ -81,19 +81,7 @@ public class LoginPageTest extends base {
 	@AfterTest
 	public void teardown()
 	{
-	//	driver.close();
+	driver.close();
 	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+		
 }

@@ -42,14 +42,14 @@ public class CreateSoloInstructorTest extends base{
 		so.stateoption().click();
 		so.Zip().sendKeys("30300");
 		so.FirstName().sendKeys("Jyoti");
-		so.LastName().sendKeys("Kharatnmol");
+		so.LastName().sendKeys("Kharatmol");
 		so.PhoneNumber().sendKeys("2345623235");
 		so.SoloInstrcutorEmailID().sendKeys("jyoti.kharatmol@azularc.com");
 		
 		Random randomGenerator = new Random();
-		int randomInt = randomGenerator.nextInt(100);
+		int randomInt = randomGenerator.nextInt(1000);
 		
-		so.CompanyAlias().sendKeys("Alias"+randomInt);
+		so.CompanyAlias().sendKeys("alias"+randomInt);
 		
 		so.MerchantId().sendKeys("234542");
 		so.MerchantUsername().sendKeys("SmartStudio");
@@ -61,7 +61,7 @@ public class CreateSoloInstructorTest extends base{
 	@AfterTest
 	public void teardown()
 	{
-		driver.close();
+	driver.close();
 	}
 	
 	
